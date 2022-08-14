@@ -281,7 +281,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                             Padding(
                               padding: const EdgeInsets.only(
                                 left: 8,
-                                right: 8,
+                                right: 8, 
                               ),
                               child: Row(
                                 children: <Widget>[

@@ -171,43 +171,25 @@ class TaskCard extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            mealsListData.done
-                                ? Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: <Widget>[
-                                      Text(
-                                        mealsListData.priority.toString(),
-                                        textAlign: TextAlign.center,
-                                        style: const TextStyle(
-                                          fontFamily: FitnessAppTheme.fontName,
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 24,
-                                          letterSpacing: 0.2,
-                                          color: FitnessAppTheme.white,
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                : Container(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 10, vertical: 5),
-                                    decoration: BoxDecoration(
-                                      color: FitnessAppTheme.nearlyWhite,
-                                      borderRadius: BorderRadius.circular(5),
-                                      boxShadow: [
-                                        BoxShadow(
-                                            color: FitnessAppTheme.nearlyBlack
-                                                .withOpacity(0.4),
-                                            offset: const Offset(4.0, 4.0),
-                                            blurRadius: 4.0),
-                                      ],
-                                    ),
-                                    child: const Text(
-                                      "Details",
-                                      style: TextStyle(color: Colors.blue),
-                                    ),
-                                  ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 5),
+                              decoration: BoxDecoration(
+                                color: FitnessAppTheme.nearlyWhite,
+                                borderRadius: BorderRadius.circular(5),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: FitnessAppTheme.nearlyBlack
+                                          .withOpacity(0.4),
+                                      offset: const Offset(4.0, 4.0),
+                                      blurRadius: 4.0),
+                                ],
+                              ),
+                              child: const Text(
+                                "Details",
+                                style: TextStyle(color: Colors.blue),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -225,16 +207,15 @@ class TaskCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Positioned(
-                    top: 0,
-                    left: 0,
+                  Positioned(
+                    top: 10,
+                    left: 10,
                     child: SizedBox(
-                      width: 80,
-                      height: 80,
-                      child: Icon(
-                        Icons.task_rounded,
-                        color: Colors.white,
-                        size: 60,
+                      width: 60,
+                      height: 60,
+                      child: Image.asset(
+                        "assets/icons/task1.png",
+                        fit: BoxFit.contain,
                       ),
                       // child: Image.asset(mealsListData.),
                     ),

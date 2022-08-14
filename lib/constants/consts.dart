@@ -1,4 +1,4 @@
-   import 'package:wallet_manager/models/task.dart';
+import 'package:wallet_manager/models/task.dart';
 
 List<TaskModel> tabIconsList = <TaskModel>[
     TaskModel(

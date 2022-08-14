@@ -135,7 +135,7 @@ class CenterNextButton extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 8),
+            padding: const EdgeInsets.only(top: 8, bottom: 10),
             child: SlideTransition(
               position: loginTextMoveAnimation,
               child: Row(
@@ -162,7 +162,7 @@ class CenterNextButton extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 40,
+            height: 20,
           )
         ],
       ),

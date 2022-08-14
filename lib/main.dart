@@ -3,15 +3,25 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'package:wallet_manager/app_theme.dart';
 import 'package:wallet_manager/introduction_animation/introduction_animation_screen.dart';
+import 'package:wallet_manager/providers/app_provider.dart';
+import 'package:wallet_manager/services/shared_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown
-  ]).then((_) => runApp(const MyApp()));
+  ]);
+  await DataPrefrences.init();
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => ThemeNotifier())],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
